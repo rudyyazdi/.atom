@@ -2,20 +2,20 @@ busy-signal@1.4.3
 change-case@0.6.5
 file-icons@2.1.21
 fold-comments@0.6.0
-git-blame@1.6.0
+git-blame@1.7.0
 intentions@1.1.5
-language-haml@0.25.2
+language-haml@0.31.1
 language-javascript-jsx@0.3.7
-language-rspec@0.7.0
+language-rspec@0.11.0
 language-slim@1.0.0
 linter@2.2.0
-linter-codeclimate@0.2.5
+linter-codeclimate@0.3.0
 linter-rubocop@2.2.3
-linter-ui-default@1.7.0
+linter-ui-default@1.7.1
 multifile-rename@0.1.6
 path-copy@0.14.0
 ruby-block@0.3.6
-script@3.17.3
+script@3.18.1
 sequential-number@0.5.0
 unicode-input@0.5.1
 
