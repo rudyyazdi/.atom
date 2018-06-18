@@ -1,0 +1,113 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/q8/tnytpyxx2qn7bqmdfy9x7kh40000gp/T/d-118120-7030-szrg55.zlf8aj1yvi/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/q8/tnytpyxx2qn7bqmdfy9x7kh40000gp/T/d-118120-7030-szrg55.zlf8aj1yvi/package.tgz",
+        "spec": "/private/var/folders/q8/tnytpyxx2qn7bqmdfy9x7kh40000gp/T/d-118120-7030-szrg55.zlf8aj1yvi/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/q8/tnytpyxx2qn7bqmdfy9x7kh40000gp/T/apm-install-dir-118120-7030-7yoh3q.w92kdcmcxr"
+    ]
+  ],
+  "_from": "../d-118120-7030-szrg55.zlf8aj1yvi/package.tgz",
+  "_id": "linter-codeclimate@0.2.5",
+  "_inCache": true,
+  "_location": "/linter-codeclimate",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/q8/tnytpyxx2qn7bqmdfy9x7kh40000gp/T/d-118120-7030-szrg55.zlf8aj1yvi/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/q8/tnytpyxx2qn7bqmdfy9x7kh40000gp/T/d-118120-7030-szrg55.zlf8aj1yvi/package.tgz",
+    "spec": "/private/var/folders/q8/tnytpyxx2qn7bqmdfy9x7kh40000gp/T/d-118120-7030-szrg55.zlf8aj1yvi/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-118120-7030-szrg55.zlf8aj1yvi/package.tgz",
+  "_shasum": "a79d5df1c8ca955fbb8aa2f2626b1508b6d23b05",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/q8/tnytpyxx2qn7bqmdfy9x7kh40000gp/T/d-118120-7030-szrg55.zlf8aj1yvi/package.tgz",
+  "_where": "/private/var/folders/q8/tnytpyxx2qn7bqmdfy9x7kh40000gp/T/apm-install-dir-118120-7030-7yoh3q.w92kdcmcxr",
+  "bugs": {
+    "url": "https://github.com/AtomLinter/linter-codeclimate/issues"
+  },
+  "configSchema": {
+    "executablePath": {
+      "type": "string",
+      "default": "codeclimate",
+      "description": "The full path to the `codeclimate` executable.",
+      "title": "Executable path"
+    },
+    "init": {
+      "type": "boolean",
+      "default": false,
+      "description": "Create a `.codeclimate.yml` file at the project root if not found.",
+      "title": "Generate initial configuration if not present"
+    },
+    "disableTimeout": {
+      "type": "boolean",
+      "default": false,
+      "description": "Disable the 10 second execution timeout.",
+      "title": "Disable timeout"
+    }
+  },
+  "dependencies": {
+    "atom-linter": "^10.0.0"
+  },
+  "description": "An Atom Linter plugin for the Code Climate CLI",
+  "devDependencies": {
+    "eslint": "^3.16.1",
+    "eslint-config-airbnb-base": "^11.1.1",
+    "eslint-plugin-import": "^2.2.0"
+  },
+  "engines": {
+    "atom": ">=1.4.0 <2.0.0"
+  },
+  "eslintConfig": {
+    "extends": "airbnb-base",
+    "rules": {
+      "global-require": "off",
+      "import/no-unresolved": [
+        "error",
+        {
+          "ignore": [
+            "atom"
+          ]
+        }
+      ]
+    },
+    "globals": {
+      "atom": true
+    },
+    "env": {
+      "node": true,
+      "browser": true
+    }
+  },
+  "homepage": "https://github.com/AtomLinter/linter-codeclimate#readme",
+  "license": "MIT",
+  "main": "./lib/index.js",
+  "name": "linter-codeclimate",
+  "optionalDependencies": {},
+  "providedServices": {
+    "linter": {
+      "versions": {
+        "1.0.0": "provideLinter"
+      }
+    }
+  },
+  "readme": "## linter-codeclimate: Atom Integration for the Code Climate CLI\n\n[![Issue Count](https://codeclimate.com/github/AtomLinter/linter-codeclimate/badges/issue_count.svg)](https://codeclimate.com/github/AtomLinter/linter-codeclimate)\n\nAn Atom package for the [Code Climate command line tool](https://github.com/codeclimate/codeclimate). Uses the awesome [Atom Linter](https://atom.io/packages/linter) infrastructure.\n\n<center><img src=\"https://raw.githubusercontent.com/AtomLinter/linter-codeclimate/master/atommovie.gif\"></center>\n\n## Installation: Code Climate CLI\n\n*Note that these instructions assume that you have Docker and Atom already installed*\n\nTo use the Code Climate Atom Package you must have the [Code Climate command line tool](https://github.com/codeclimate/codeclimate) installed.\n\nIf you don't already, you can install it like this (assuming Mac OSX with `brew` - Linux instructions can be found in the CLI repo README):\n\n```\nbrew tap codeclimate/formulae\nbrew install codeclimate\n```\n\nYou can test that the installation worked correctly by invoking `codeclimate version` - if a version number is printed - you're ready to roll!\n\nOnce you have the CLI installed, you'll want to make sure that the engines you need to analyze your code are installed locally. If the repo you want to analyze already has a `.codeclimate.yml` file, you can run:\n\n```\ncd MYPROJECT\ncodeclimate engines:install\n```\n\nAnd that should take care of it for you. If you'd like to analyze a project which has never been analyzed by Code Climate before, the CLI can take care of that for you as well! Just run:\n\n```\ncd MYPROJECT\ncodeclimate init\ncodeclimate engines:install\n```\n\nThe CLI will detect the file extensions of the code in your project and turn on engines which are meant to analyze those languages or frameworks. You're now ready to test the CLI with your code! Just make sure ou are still in the same directory as your project's `.codeclimate.yml` and run:\n\n```\ncodeclimate analyze\n```\n\nAnd you should see some progress, and most likely, some results. Cool! Now it's time to get it working in your editor.\n\n## Installation: Atom Package\n\nOnce you have a functioning installation of the Code Climate CLI, you're ready to see the same results within the comfort of your favorite text editor. Install the `linter` package, the `linter-codeclimate` package, and make sure any of the language modes you prefer are also installed.\n\nOnce these are installed, reload your editor (`View` -> `Reload` from the Atom menu), open a file of your choice, and save it. Code Climate analysis will run in the background and then pop up results that you can inspect right inside Atom. Awesome! You're now linting with superpowers.\n\n## Installation: Special Considerations\n\nNote that currently `linter-codeclimate` works only on single file analysis types, not on engines which analyze the entire codebase at once. The following engines currently work with the Atom package (this will soon be all packages - thanks for your patience as we work out some kinks):\n\n\n* All Languages: fixme\n* Python: Radon, Pep8\n* Ruby: Rubocop\n* CoffeeScript: CoffeeLint\n* JavaScript: ESLint\n* PHP: PHPCodeSniffer, PHPMD\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AtomLinter/linter-codeclimate.git"
+  },
+  "version": "0.2.5"
+}

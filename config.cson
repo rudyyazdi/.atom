@@ -1,0 +1,28 @@
+"*":
+  core:
+    closeDeletedFileTabs: true
+    disabledPackages: [
+      "linter"
+    ]
+    packagesWithKeymapsDisabled: [
+      "change-case"
+    ]
+    telemetryConsent: "no"
+  editor:
+    fontSize: 16
+    scrollPastEnd: true
+    showInvisibles: true
+  "exception-reporting":
+    userId: "a0acd7b5-c540-46f2-958a-5b3bc5193387"
+  "git-blame":
+    columnWidth: 252
+  "linter-rubocop":
+    command: "/Users/rudy/.rbenv/shims/rubocop"
+    disableWhenNoConfigFile: true
+  "linter-ui-default": {}
+  react:
+    enabledForAllJavascriptFiles: true
+  "tree-view":
+    hideIgnoredNames: true
+  welcome:
+    showOnStartup: false
