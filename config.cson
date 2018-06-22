@@ -14,6 +14,8 @@
     showInvisibles: true
   "exception-reporting":
     userId: "a0acd7b5-c540-46f2-958a-5b3bc5193387"
+  fonts:
+    fontFamily: "Inconsolata"
   "git-blame":
     columnWidth: 252
   "linter-rubocop":
