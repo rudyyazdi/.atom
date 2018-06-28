@@ -2,12 +2,16 @@
   core:
     closeDeletedFileTabs: true
     disabledPackages: [
-      "linter"
+      "linter-codeclimate"
     ]
     packagesWithKeymapsDisabled: [
       "change-case"
     ]
     telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "rudy-dark-syntax"
+    ]
   editor:
     fontSize: 16
     scrollPastEnd: true
@@ -21,7 +25,8 @@
   "linter-rubocop":
     command: "/Users/rudy/.rbenv/shims/rubocop"
     disableWhenNoConfigFile: true
-  "linter-ui-default": {}
+  "linter-ui-default":
+    showPanel: true
   react:
     enabledForAllJavascriptFiles: true
   "tree-view":

@@ -11,10 +11,12 @@ language-slim@1.0.0
 linter@2.2.0
 linter-codeclimate@0.3.0
 linter-rubocop@2.2.3
+linter-ruby@1.2.6
 linter-ui-default@1.7.1
 multifile-rename@0.1.6
 path-copy@0.14.0
 ruby-block@0.3.6
+rudy-dark-syntax@0.0.0
 script@3.18.1
 sequential-number@0.5.0
 unicode-input@0.5.1
